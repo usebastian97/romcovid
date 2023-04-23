@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/navigation_information"
         android:name="com.example.romcovid.ui.notifications.InformationFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_information"
         tools:layout="@layout/fragment_information" />
 
     <fragment

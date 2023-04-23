@@ -1,12 +1,11 @@
-package com.example.romcovid
+package com.example.romcovid.activity
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.romcovid.R
 import com.example.romcovid.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
