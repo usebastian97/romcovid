@@ -10,10 +10,6 @@ import com.example.romcovid.R
 
 class SettingsFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = SettingsFragment()
-    }
-
     private lateinit var viewModel: SettingsViewModel
 
     override fun onCreateView(

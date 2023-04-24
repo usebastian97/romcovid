@@ -175,4 +175,8 @@
     <string name="v2_terms_hyperlink">I accept <a href="https://apturicovid.lv/lietosanas-noteikumi#en">new App Terms of Use</a>, and have read the <a href="https://apturicovid.lv/privatuma-politika#en">new Privacy policy</a></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_contact_number">Your contact number</string>
+    <string name="_0766877423">0766877423</string>
+    <string name="provide">Provide</string>
+    <string name="description_your_number">In case of contact you will only get a notification in the app, and support options available to you will be limited</string>
 </resources>
