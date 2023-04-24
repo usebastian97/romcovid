@@ -26,7 +26,7 @@
     <string name="home_dead">Deaths</string>
 
     <!--Label-->
-    <string name="label_stats_title">COVID-19 statistics in Latvia</string>
+    <string name="label_stats_title">COVID-19 statistics in Romania</string>
     <string name="label_tested">Tested</string>
     <string name="label_infected">New cases</string>
     <string name="label_dead">Deaths</string>
