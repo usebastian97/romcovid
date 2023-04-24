@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "706729410111",
+    "project_id": "romcovid-3a047",
+    "storage_bucket": "romcovid-3a047.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706729410111:android:5f0ad88d30e3fb4abb428a",
+        "android_client_info": {
+          "package_name": "com.example.romcovid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706729410111-n5lkpvqsuhm04b5cde1bs058tcu4oq4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJOM4WMx_bXYiE_TAEcnxoKDv7ODF-B4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706729410111-n5lkpvqsuhm04b5cde1bs058tcu4oq4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

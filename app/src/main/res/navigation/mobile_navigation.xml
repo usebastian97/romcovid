@@ -8,24 +8,21 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.romcovid.ui.home.HomeFragment"
-        android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.romcovid.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_statistics"
+        android:name="com.example.romcovid.ui.dashboard.StatisticsFragment"
+        tools:layout="@layout/fragment_statistics" />
 
     <fragment
         android:id="@+id/navigation_information"
-        android:name="com.example.romcovid.ui.notifications.InformationFragment"
+        android:name="com.example.romcovid.ui.information.InformationFragment"
         android:label="@string/title_information"
         tools:layout="@layout/fragment_information" />
 
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.example.romcovid.ui.settings.SettingsFragment"
-        android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
 </navigation>
