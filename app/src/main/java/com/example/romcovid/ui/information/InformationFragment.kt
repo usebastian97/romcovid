@@ -1,4 +1,4 @@
-package com.example.romcovid.ui.notifications
+package com.example.romcovid.ui.information
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,7 +23,7 @@ class InformationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val notificationsViewModel =
-            ViewModelProvider(this)[NotificationsViewModel::class.java]
+            ViewModelProvider(this)[InformationViewModel::class.java]
 
         _binding = FragmentInformationBinding.inflate(inflater, container, false)
         val root: View = binding.root
