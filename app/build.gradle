@@ -94,6 +94,9 @@ dependencies {
     api "net.danlew:android.joda:2.10.2"
     testImplementation "joda-time:joda-time:2.10.2"
 
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
+    implementation 'com.google.firebase:firebase-database-ktx'
+
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
     implementation 'com.google.android.gms:play-services-auth-api-phone:17.4.0'
     implementation 'com.google.android.gms:play-services-basement:17.3.0'
