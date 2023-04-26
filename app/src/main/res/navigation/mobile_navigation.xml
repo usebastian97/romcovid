@@ -24,5 +24,15 @@
     <fragment
         android:id="@+id/navigation_settings"
         android:name="com.example.romcovid.ui.settings.SettingsFragment"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/navigate_to_contact_fragment"
+            app:destination="@+id/fragmentContainer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentContainer"
+        android:name="com.example.romcovid.ui.settings.ContactFragment"
+        tools:layout="@layout/fragment_contact" />
 </navigation>

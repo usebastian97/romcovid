@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_arrow_iv"
+                android:layout_width="@dimen/back_arrow_size"
+                android:layout_height="@dimen/back_arrow_size"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/back_arrow_padding_top"
+                android:padding="@dimen/back_arrow_padding"
+                android:src="@drawable/ic_back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/contact_image_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_side_margin"
+                android:src="@drawable/image_contact"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back_arrow_iv" />
+
+            <TextView
+                android:id="@+id/contact_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_side_margin"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="@dimen/fragment_side_margin"
+                android:text="@string/label_specify_phone"
+                android:textColor="@color/titleTextColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_image_iv" />
+
+            <TextView
+                android:id="@+id/contact_description_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fragment_side_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/fragment_side_margin"
+                android:text="@string/specify_contact_description"
+                android:textColor="@color/subtitleTextColor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_title_tv" />
+
+            <RelativeLayout
+                android:id="@+id/contact_why_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/fragment_side_margin"
+                android:paddingTop="8dp"
+                android:paddingEnd="@dimen/fragment_side_margin"
+                android:paddingBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contact_description_tv">
+
+                <TextView
+                    android:id="@+id/contact_why_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/label_why_number"
+                    android:textColor="@color/titleTextColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/contact_why_iv"
+                    android:layout_width="10dp"
+                    android:layout_height="13dp"
+                    android:layout_alignEnd="@id/contact_why_tv"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="3dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/titleTextColor" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/phone_code_et"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/fragment_side_margin"
+                android:background="@drawable/bg_edit_text_phone_code"
+                android:enabled="false"
+                android:inputType="phone"
+                android:minWidth="75dp"
+                android:paddingStart="16dp"
+                android:text="@string/ro_phone_code"
+                android:textColor="@color/grayTextColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/phone_et" />
+
+            <View
+                android:id="@+id/phone_divider"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/dividerGray"
+                app:layout_constraintBottom_toBottomOf="@id/phone_code_et"
+                app:layout_constraintStart_toEndOf="@id/phone_code_et"
+                app:layout_constraintTop_toTopOf="@id/phone_code_et" />
+
+            <EditText
+                android:id="@+id/phone_et"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/fragment_side_margin"
+                android:background="@drawable/bg_edit_text_phone"
+                android:digits="0123456789"
+                android:inputType="phone"
+                android:maxLength="8"
+                android:paddingStart="16dp"
+                android:singleLine="true"
+                android:textColor="@color/subtitleTextColor"
+                app:layout_constraintBottom_toTopOf="@id/barrier"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/phone_divider"
+                app:layout_constraintTop_toBottomOf="@id/contact_why_rl"
+                tools:ignore="TextFields" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="top"
+                app:constraint_referenced_ids="third_party_contact_cb,other_contact_description_tv" />
+
+            <CheckBox
+                android:id="@+id/third_party_contact_cb"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="@dimen/fragment_side_margin"
+                android:layout_marginTop="16dp"
+                android:button="@drawable/checkbox_selector"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phone_et" />
+
+            <TextView
+                android:id="@+id/other_contact_description_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fragment_side_margin"
+                android:layout_marginBottom="2dp"
+                android:text="@string/label_other_contact"
+                android:textColor="@color/subtitleTextColor"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/third_party_contact_cb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/third_party_contact_cb"
+                app:layout_constraintTop_toTopOf="@id/third_party_contact_cb" />
+
+            <RelativeLayout
+                android:id="@+id/remain_anonymous_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/fragment_side_margin"
+                android:paddingEnd="@dimen/fragment_side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/other_contact_description_tv">
+
+                <TextView
+                    android:id="@+id/remain_anonymous_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/label_remain_anonymous"
+                    android:textColor="@color/titleTextColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="13dp"
+                    android:layout_alignEnd="@id/remain_anonymous_tv"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="3dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/titleTextColor" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="@dimen/default_button_width"
+                android:layout_height="@dimen/default_button_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="58dp"
+                android:layout_marginBottom="58dp"
+                android:background="@drawable/default_button_bg_selector"
+                android:text="@string/button_next"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/remain_anonymous_rl"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

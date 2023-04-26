@@ -11,9 +11,6 @@ import com.example.romcovid.databinding.FragmentStatisticsBinding
 class StatisticsFragment : Fragment() {
 
     private var _binding: FragmentStatisticsBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -26,6 +23,7 @@ class StatisticsFragment : Fragment() {
 
         _binding = FragmentStatisticsBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onDestroyView() {
