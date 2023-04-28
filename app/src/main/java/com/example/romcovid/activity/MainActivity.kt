@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun showBottomNav() {
         binding.navView.visibility = View.VISIBLE
     }
