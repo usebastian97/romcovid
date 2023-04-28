@@ -123,7 +123,7 @@
     <string name="label_dummy_point_4">The app does not record GPS data even if GPS is switched on</string>
     <string name="faq_most_asked_questions">Frequently asked questions</string>
     <string name="faq_question_1">Why use this app?</string>
-    <string name="faq_answer_1">To help limit the spread of coronavirus in Latvia and find out faster if you have been exposed to COVID-19. This app enables you to make the decision to self-isolate faster to help keep your friends, family and the general public safe, as well as monitor symptoms and seek help faster if needed.</string>
+    <string name="faq_answer_1">To help limit the spread of coronavirus in Romania and find out faster if you have been exposed to COVID-19. This app enables you to make the decision to self-isolate faster to help keep your friends, family and the general public safe, as well as monitor symptoms and seek help faster if needed.</string>
     <string name="faq_question_2">How many users does the app need to be effective?</string>
     <string name="faq_answer_2">According to calculations by epidemiologists and experts, even if the app is used just by 20% of residents of Latvia, it will already help identify risks and limit the spread of infection going forward. However, the more people use it, the more effective it will be.</string>
     <string name="faq_question_3">How does the app work?</string>
@@ -180,4 +180,7 @@
     <string name="provide">Provide</string>
     <string name="description_your_number">In case of contact you will only get a notification in the app, and support options available to you will be limited</string>
     <string name="ro_phone_code">+40</string>
+    <string name="othersettings">Other Settings</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="Languages">Language</string>
 </resources>

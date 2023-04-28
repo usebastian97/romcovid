@@ -186,7 +186,8 @@
                 android:track="@drawable/switch_track_red"
                 app:layout_constraintBottom_toTopOf="@id/divider_2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider_1" />
+                app:layout_constraintTop_toBottomOf="@+id/divider_1"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             <View
                 android:id="@+id/divider_2"
@@ -201,16 +202,89 @@
                 app:layout_constraintTop_toBottomOf="@id/label_notify_contact_search_tv" />
 
             <TextView
-                android:id="@+id/version_nr"
-                android:layout_width="0dp"
+                android:id="@+id/txt_otherSetings"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/fragment_side_margin"
-                android:layout_marginTop="20dp"
-                android:singleLine="true"
-                android:textColor="@color/grayTextColor"
-                app:layout_constraintEnd_toStartOf="@id/notify_switch"
+                android:layout_marginTop="16dp"
+                android:text="@string/othersettings"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.088"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/divider_2" />
+                app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+            <RelativeLayout
+                android:id="@+id/remain_anonymous_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/fragment_side_margin"
+                android:paddingEnd="@dimen/fragment_side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_otherSetings">
+
+                <TextView
+                    android:id="@+id/buttonBmi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/bmi_calculator"
+                    android:textColor="@color/titleTextColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="13dp"
+                    android:layout_alignEnd="@id/buttonBmi"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="3dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/titleTextColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/remain_anonymous_rl_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/fragment_side_margin"
+                android:paddingEnd="@dimen/fragment_side_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/remain_anonymous_rl">
+
+                <TextView
+                    android:id="@+id/buttonLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/Languages"
+                    android:textColor="@color/titleTextColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="13dp"
+                    android:layout_alignEnd="@id/buttonLanguage"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="3dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/titleTextColor" />
+            </RelativeLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
