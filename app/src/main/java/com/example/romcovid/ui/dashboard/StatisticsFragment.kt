@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.romcovid.databinding.FragmentStatisticsBinding
 
+
 class StatisticsFragment : Fragment() {
 
     private var _binding: FragmentStatisticsBinding? = null
@@ -19,7 +20,9 @@ class StatisticsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentStatisticsBinding.inflate(inflater, container, false)
+
         return binding.root
 
     }
+
 }
