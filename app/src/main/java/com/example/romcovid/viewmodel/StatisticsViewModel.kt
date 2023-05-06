@@ -1,4 +1,4 @@
-package com.example.romcovid.ui.dashboard
+package com.example.romcovid.viewmodel
 
 import androidx.lifecycle.ViewModel
 

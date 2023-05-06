@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.romcovid.R
 import com.example.romcovid.databinding.FragmentInformationBinding
+import com.example.romcovid.viewmodel.InformationViewModel
 import net.cachapa.expandablelayout.ExpandableLayout
 
 class InformationFragment : Fragment(), View.OnClickListener {

@@ -1,4 +1,4 @@
-package com.example.romcovid.ui.settings
+package com.example.romcovid.viewmodel
 
 import androidx.lifecycle.ViewModel
 
