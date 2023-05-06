@@ -184,7 +184,7 @@
     <string name="bmi_calculator">BMI Calculator</string>
     <string name="Languages">Language</string>
 
-    <string name="label_last_updated">Last Updated</string>
+    <string name="label_last_updated">Last Updated: 06.05.2023</string>
     <string name="sample_update_time">Updated 2h ago</string>
     <string name="label_confirmed">TOTAL</string>
     <string name="labell_recovered">RECOVERED</string>

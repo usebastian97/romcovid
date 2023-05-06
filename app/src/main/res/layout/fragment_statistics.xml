@@ -41,16 +41,14 @@
 
                 <TextView
                     android:id="@+id/stats_date_refreshed_tv"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/activity_horizontal_margin"
-                    android:layout_marginTop="2dp"
-                    android:textColor="@color/subtitleTextColor"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/label_last_updated"
                     android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/stats_title_tv"
-                    tools:text="@string/label_data_refreshed" />
+                    app:layout_constraintTop_toBottomOf="@id/stats_title_tv" />
 
                 <androidx.constraintlayout.helper.widget.Flow
                     android:id="@+id/stat_card_flow"
@@ -371,8 +369,8 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@id/recovered_total_label_tv"
                         app:layout_constraintStart_toEndOf="@id/recovered_total_label_tv"
-                        tools:text="543"
-                        tools:ignore="RtlSymmetry" />
+                        tools:ignore="RtlSymmetry"
+                        tools:text="543" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <TextView
