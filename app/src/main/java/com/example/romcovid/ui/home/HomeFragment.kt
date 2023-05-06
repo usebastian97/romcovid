@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.romcovid.databinding.FragmentHomeBinding
 import com.example.romcovid.model.CovidStats
+import com.example.romcovid.viewmodel.HomeViewModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference

@@ -1,4 +1,4 @@
-package com.example.romcovid.ui.information
+package com.example.romcovid.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

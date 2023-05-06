@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.romcovid.R
 import com.example.romcovid.databinding.FragmentStatisticsBinding
 import com.example.romcovid.model.CovidStats
 import com.google.firebase.database.DataSnapshot
@@ -39,6 +41,11 @@ class StatisticsFragment : Fragment() {
         getRecoveredData()
         getTestedData()
         getDeathsData()
+
+        binding.detailedStatistics.setOnClickListener {
+            findNavController().navigate(R.id.navigate_to_detailed_stats)
+
+        }
         return binding.root
 
     }

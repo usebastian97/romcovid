@@ -13,7 +13,12 @@
     <fragment
         android:id="@+id/navigation_statistics"
         android:name="com.example.romcovid.ui.dashboard.StatisticsFragment"
-        tools:layout="@layout/fragment_statistics" />
+        tools:layout="@layout/fragment_statistics">
+        <action
+            android:id="@+id/navigate_to_detailed_stats"
+            app:destination="@+id/fragmentCountryStats"/>
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_information"
@@ -35,4 +40,9 @@
         android:id="@+id/fragmentContainer"
         android:name="com.example.romcovid.ui.settings.ContactFragment"
         tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/fragmentCountryStats"
+        android:name="com.example.romcovid.ui.dashboard.CountryStatsFragment"
+        tools:layout="@layout/fragment_all_country_stats"/>
 </navigation>
