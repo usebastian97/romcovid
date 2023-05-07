@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main_container_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_fancy_bottom"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/stat_card_flow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="stat_card_1,stat_card_2,stat_card_3,stat_card_4"
+                    app:flow_horizontalGap="12dp"
+                    app:flow_maxElementsWrap="2"
+                    app:flow_verticalGap="18dp"
+                    app:flow_wrapMode="aligned"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/stat_card_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stats_card_rounded"
+                    android:minWidth="@dimen/stat_card_min_width"
+                    android:minHeight="@dimen/stat_card_height"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <FrameLayout
+                        android:id="@+id/stat_header_1"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/bg_stats_orange"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/stat_card_side_margin"
+                            android:text="@string/label_infected"
+                            android:textColor="@android:color/white" />
+                    </FrameLayout>
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/infected_barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="right"
+                        app:constraint_referenced_ids="infected_total_label_tv,infected_yesterday_label_tv" />
+
+                    <TextView
+                        android:id="@+id/infected_total_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_side_margin"
+                        android:layout_marginTop="@dimen/stat_card_side_margin"
+                        android:paddingBottom="2dp"
+                        android:text="@string/label_total"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/stat_header_1" />
+
+                    <TextView
+                        android:id="@+id/infected_yesterday_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_side_margin"
+                        android:layout_marginTop="@dimen/stat_card_side_margin"
+                        android:paddingBottom="2dp"
+                        android:text="@string/label_yesterday"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/infected_total_label_tv" />
+
+                    <TextView
+                        android:id="@+id/infected_total_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_middle_margin"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/statValueTextColor"
+                        android:textSize="@dimen/stat_regular_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/infected_total_label_tv"
+                        app:layout_constraintStart_toEndOf="@id/infected_barrier"
+                        tools:text="1231" />
+
+                    <TextView
+                        android:id="@+id/infected_yesterday_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/statValueTextColor"
+                        android:textSize="@dimen/stat_regular_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/infected_yesterday_label_tv"
+                        app:layout_constraintStart_toStartOf="@+id/infected_total_tv"
+                        tools:text="543" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/stat_card_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stats_card_rounded"
+                    android:minWidth="@dimen/stat_card_min_width"
+                    android:minHeight="@dimen/stat_card_height"
+                    app:layout_constraintStart_toEndOf="@id/stat_card_1">
+
+                    <FrameLayout
+                        android:id="@+id/stat_header_2"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/bg_stats_red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/stat_card_side_margin"
+                            android:text="@string/label_dead"
+                            android:textColor="@android:color/white" />
+                    </FrameLayout>
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/dead_barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="right"
+                        app:constraint_referenced_ids="dead_total_label_tv,dead_yesterday_label_tv" />
+
+                    <TextView
+                        android:id="@+id/dead_total_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_side_margin"
+                        android:layout_marginTop="@dimen/stat_card_side_margin"
+                        android:paddingBottom="2dp"
+                        android:text="@string/label_total"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/stat_header_2" />
+
+                    <TextView
+                        android:id="@+id/dead_yesterday_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_side_margin"
+                        android:layout_marginTop="@dimen/stat_card_side_margin"
+                        android:paddingBottom="2dp"
+                        android:text="@string/label_yesterday"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dead_total_label_tv" />
+
+                    <TextView
+                        android:id="@+id/dead_total_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_middle_margin"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/statValueTextColor"
+                        android:textSize="@dimen/stat_regular_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/dead_total_label_tv"
+                        app:layout_constraintStart_toEndOf="@+id/dead_barrier"
+                        tools:text="1231" />
+
+                    <TextView
+                        android:id="@+id/dead_yesterday_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/statValueTextColor"
+                        android:textSize="@dimen/stat_regular_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/dead_yesterday_label_tv"
+                        app:layout_constraintStart_toStartOf="@id/dead_total_tv"
+                        tools:text="543" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/stat_card_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stats_card_rounded"
+                    android:minWidth="@dimen/stat_card_min_width"
+                    android:minHeight="@dimen/stat_card_height"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stat_card_1">
+
+                    <FrameLayout
+                        android:id="@+id/stat_header_3"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/bg_stats_blue"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/stat_card_side_margin"
+                            android:text="@string/label_tested"
+                            android:textColor="@android:color/white" />
+                    </FrameLayout>
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/tested_barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="right"
+                        app:constraint_referenced_ids="tested_total_label_tv,tested_yesterday_label_tv" />
+
+                    <TextView
+                        android:id="@+id/tested_total_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_side_margin"
+                        android:layout_marginTop="@dimen/stat_card_side_margin"
+                        android:paddingBottom="2dp"
+                        android:text="@string/label_total"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/stat_header_3" />
+
+                    <TextView
+                        android:id="@+id/tested_yesterday_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_side_margin"
+                        android:layout_marginTop="@dimen/stat_card_side_margin"
+                        android:paddingBottom="2dp"
+                        android:text="@string/label_yesterday"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tested_total_label_tv" />
+
+                    <TextView
+                        android:id="@+id/tested_total_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_middle_margin"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/statValueTextColor"
+                        android:textSize="@dimen/stat_regular_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tested_total_label_tv"
+                        app:layout_constraintStart_toEndOf="@+id/tested_barrier"
+                        tools:text="1231" />
+
+                    <TextView
+                        android:id="@+id/tested_yesterday_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/statValueTextColor"
+                        android:textSize="@dimen/stat_regular_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/tested_yesterday_label_tv"
+                        app:layout_constraintStart_toStartOf="@id/tested_total_tv"
+                        tools:text="543" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/stat_card_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stats_card_rounded"
+                    android:minWidth="@dimen/stat_card_min_width"
+                    android:minHeight="@dimen/stat_card_height"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/stat_card_3"
+                    app:layout_constraintTop_toBottomOf="@id/stat_card_2">
+
+                    <FrameLayout
+                        android:id="@+id/stat_header_4"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/bg_stats_card_top_rounded"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/stat_card_side_margin"
+                            android:text="@string/label_recovered"
+                            android:textColor="@android:color/white" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/recovered_total_label_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_side_margin"
+                        android:paddingBottom="2dp"
+                        android:text="@string/label_total"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/stat_header_4" />
+
+                    <TextView
+                        android:id="@+id/recovered_total_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/stat_card_middle_margin"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/statValueTextColor"
+                        android:textSize="@dimen/stat_regular_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/recovered_total_label_tv"
+                        app:layout_constraintStart_toEndOf="@id/recovered_total_label_tv"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="543" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </ScrollView>
+</layout>

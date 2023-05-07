@@ -7,24 +7,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.romcovid.R
 import com.example.romcovid.adapters.CountryStatsAdapter
 import com.example.romcovid.databinding.FragmentAllCountryStatsBinding
+import com.example.romcovid.model.ChildItem
 import com.example.romcovid.model.CountryStats
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 
 class CountryStatsFragment : Fragment() {
 
     private var _binding: FragmentAllCountryStatsBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var countriesRecyclerView: RecyclerView
-    private lateinit var adapter: CountryStatsAdapter
-    private lateinit var database: DatabaseReference
-    var countriesList = arrayListOf<CountryStats>()
+    private lateinit var parentRecyclerView: RecyclerView
+    private lateinit var parentList: ArrayList<CountryStats>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,33 +29,49 @@ class CountryStatsFragment : Fragment() {
 
         binding.rvCountry.layoutManager = LinearLayoutManager(context)
         binding.rvCountry.setHasFixedSize(true)
-        adapter = CountryStatsAdapter(countriesList)
-        binding.rvCountry.adapter = adapter
+        parentList = ArrayList()
 
-        getCountries()
+        prepareData()
+        val adapter = CountryStatsAdapter(parentList)
+        binding.rvCountry.adapter = adapter
 
         return binding.root
     }
 
-    private fun getCountries() {
-        database = FirebaseDatabase.getInstance().getReference("countries")
-        database.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()) {
-                    for (countries in snapshot.children) {
-                        val countriesData = countries.getValue(CountryStats::class.java)
-                        countriesList.add(countriesData!!)
-                    }
-                    val adapter = CountryStatsAdapter(countriesList)
-                    binding.rvCountry.adapter = adapter
-                    binding.rvCountry.visibility = View.VISIBLE
-                }
-            }
+    //TODO: add an API
+    private fun prepareData() {
 
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
+        val childAfghanistan = ArrayList<ChildItem>()
+        childAfghanistan.add(ChildItem("23K", "1,1K", "8.8K", "19", "3,4M", "56K", "10K"))
+        parentList.add(CountryStats(R.drawable.afganistan, "Afghanistan", childAfghanistan))
 
-        })
+        val childAndorra = ArrayList<ChildItem>()
+        childAndorra.add(ChildItem("23K", "1,1K", "8.8K", "19", "3,4M", "56K", "10K"))
+        parentList.add(CountryStats(R.drawable.ad, "Andorra", childAndorra))
+
+        val childAG = ArrayList<ChildItem>()
+        childAG.add(ChildItem("23K", "1,1K", "8.8K", "19", "3,4M", "56K", "10K"))
+        parentList.add(CountryStats(R.drawable.ag, "Antigua and Barbuda", childAG))
+
+        val ai = ArrayList<ChildItem>()
+        ai.add(ChildItem("23K", "1,1K", "8.8K", "19", "3,4M", "56K", "10K"))
+        parentList.add(CountryStats(R.drawable.ai, "Anguilla", ai))
+
+        val arm = ArrayList<ChildItem>()
+        arm.add(ChildItem("23K", "1,1K", "8.8K", "19", "3,4M", "56K", "10K"))
+        parentList.add(CountryStats(R.drawable.am, "Armenia", arm))
+
+        val arg = ArrayList<ChildItem>()
+        arg.add(ChildItem("23K", "1,1K", "8.8K", "19", "3,4M", "56K", "10K"))
+        parentList.add(CountryStats(R.drawable.ar, "Argentina", arg))
+
+        val at = ArrayList<ChildItem>()
+        at.add(ChildItem("23K", "1,1K", "8.8K", "19", "3,4M", "56K", "10K"))
+        parentList.add(CountryStats(R.drawable.at, "Austria", at))
+
+        // TODO: Rest of countries
+
+
     }
+
 }
