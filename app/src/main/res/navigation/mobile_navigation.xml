@@ -34,6 +34,10 @@
         <action
             android:id="@+id/navigate_to_contact_fragment"
             app:destination="@+id/fragmentContainer" />
+
+        <action
+            android:id="@+id/navigate_to_bmi"
+            app:destination="@+id/fragmentBmi" />
     </fragment>
 
     <fragment
@@ -44,5 +48,31 @@
     <fragment
         android:id="@+id/fragmentCountryStats"
         android:name="com.example.romcovid.ui.dashboard.CountryStatsFragment"
-        tools:layout="@layout/fragment_all_country_stats"/>
+        tools:layout="@layout/fragment_all_country_stats" />
+
+    <fragment
+        android:id="@+id/fragmentBmi"
+        android:name="com.example.romcovid.ui.settings.bmi.BmiFragment"
+        tools:layout="@layout/fragment_bmi">
+
+        <action
+            android:id="@+id/navigate_to_result"
+            app:destination="@id/resultFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.romcovid.ui.settings.bmi.ResultFragment"
+        tools:layout="@layout/fragment_result">
+
+        <argument
+            android:name="bmi"
+            app:argType="float" />
+
+        <argument
+            android:name="age"
+            app:argType="string" />
+
+    </fragment>
 </navigation>

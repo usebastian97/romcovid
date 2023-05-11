@@ -204,9 +204,39 @@
     <string name="search">Search</string>
     <string name="logo">logo</string>
     <string name="romania">Romania</string>
+    <string name="calculate">Calculate</string>
+    <string name="plus">Plus</string>
+    <string name="minus">Minus</string>
+    <string name="_19">19</string>
+    <string name="age">Age</string>
+    <string name="_50">50</string>
+    <string name="weight">Weight</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="height">Height</string>
+    <string name="_0cm">0cm</string>
     <string-array name="filters">
         <item>None</item>
         <item><![CDATA[>=]]></item>
         <item><![CDATA[<=]]></item>
     </string-array>
+
+    // -- BMI -- //
+    <string name="cm">cm</string>
+    <string name="_18_5_25_kg_m2">18.5 – 25 kg/m²</string>
+    <string name="share">Distribuie rezultatul</string>
+    <string name="your_age">Age:</string>
+    <string name="cannot_zero">Înălțimea nu poate fi zero</string>
+    <string name="choose_gender">Trebuie sa alegi genul!</string>
+    <string name="age_100">Varsta nu poate fi mai mare de 100</string>
+    <string name="age_zero">Varsta nu poate fi mai mica de 1</string>
+    <string name="weight_zero">Greutatea nu poate fi mai mica de 1</string>
+    <string name="weight_300">Greutatea nu poate fi mai mare de 300</string>
+    <string name="teenage">Teenage</string>
+    <string name="adult">Adult</string>
+    <string name="bmi">bmi</string>
+    <string name="agee">age</string>
+    <string name="normal_bmi_range">Normal BMI range:</string>
+    <string name="your_result">Your Result</string>
+    <string name="recalculate">Recalculate</string>
 </resources>

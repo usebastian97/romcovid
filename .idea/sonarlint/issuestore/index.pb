@@ -1,8 +1,4 @@
 
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-?
-settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 o
 ?app/src/main/java/com/example/romcovid/activity/MainActivity.kt,c\f\cf02c760deec497f0be66085b935e80edc40a0ab
 Á
@@ -683,3 +679,5 @@ y
 Iapp/src/main/java/com/example/romcovid/ui/dashboard/StatisticsFragment.kt,2\c\2c887a6d7c5afd1a7118eeacd136bf397d26e7d2
 n
 >app/src/main/java/com/example/romcovid/ui/home/HomeFragment.kt,d\7\d7206957b5547344987c044b345b236af0edf676
+?
+settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233

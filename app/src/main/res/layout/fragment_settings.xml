@@ -229,7 +229,7 @@
 
                 <TextView
                     android:id="@+id/buttonBmi"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:paddingTop="8dp"
@@ -238,7 +238,8 @@
                     android:text="@string/bmi_calculator"
                     android:textColor="@color/titleTextColor"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
 
                 <ImageView
                     android:layout_width="10dp"
@@ -265,7 +266,7 @@
 
                 <TextView
                     android:id="@+id/buttonLanguage"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:paddingTop="8dp"
@@ -274,7 +275,8 @@
                     android:text="@string/Languages"
                     android:textColor="@color/titleTextColor"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
 
                 <ImageView
                     android:layout_width="10dp"

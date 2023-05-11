@@ -31,6 +31,10 @@ class SettingsFragment : Fragment() {
             findNavController().navigate(R.id.navigate_to_contact_fragment)
         }
 
+        binding.buttonBmi.setOnClickListener {
+            findNavController().navigate(R.id.navigate_to_bmi)
+        }
+
     }
 
 }

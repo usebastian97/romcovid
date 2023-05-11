@@ -1,8 +1,4 @@
 
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-?
-settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 o
 ?app/src/main/java/com/example/romcovid/activity/MainActivity.kt,c\f\cf02c760deec497f0be66085b935e80edc40a0ab
 Á
@@ -683,3 +679,5 @@ p
 @caches/transforms-3/0b59be694f9107c8cfba4c5eeac72eb2/results.bin,a\5\a5dd32b355bc5cde94abb68ec4d16c3a417493a5
 †
 Vcaches/transforms-3/ef46f510392dcff02a60df6a9f55fdab/transformed/monitor-1.6.1-runtime,6\d\6dad0849a714ad43f13ffc43117f26f9f13307f7
+?
+settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233

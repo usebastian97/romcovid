@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.firebase.crashlytics'
     id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
 }
 
 
@@ -45,13 +46,14 @@ dependencies {
 
     api 'com.google.android.gms:play-services-base:18.2.0'
     api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "com.google.android.gms:play-services-safetynet:$google_play_services_version"
-    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
