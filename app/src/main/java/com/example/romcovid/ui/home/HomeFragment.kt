@@ -18,13 +18,14 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import io.github.muddz.styleabletoast.StyleableToast
 import timber.log.Timber
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
 
-    private lateinit var database:DatabaseReference
+    private lateinit var database: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -56,12 +57,28 @@ class HomeFragment : Fragment() {
                     val image = R.drawable.ic_contact_tracing
                     textHomeStatus.setTextColor(ContextCompat.getColor(requireContext(), color))
                     homeMainIv.setImageResource(image)
+                    StyleableToast.makeText(
+                        requireContext(),
+                        "All tracking functionalities are activated",
+                        R.style.mytoast
+                    ).show()
                 } else {
                     textHomeStatus.setText(R.string.home_status_idle)
                     val colorIdle = R.color.colorButtonRed
                     val imageIdle = R.drawable.ic_contact_tracing_disabled
-                    textHomeStatus.setTextColor(ContextCompat.getColor(requireContext(), colorIdle))
+                    textHomeStatus.setTextColor(
+                        ContextCompat.getColor(
+                            requireContext(),
+                            colorIdle
+                        )
+                    )
                     homeMainIv.setImageResource(imageIdle)
+                    StyleableToast.makeText(
+                        requireContext(),
+                        "All tracking functionalities are disabled",
+                        R.style.toastDisable
+                    ).show()
+
                 }
             }
         }
