@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.Romcovid" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
@@ -31,5 +31,36 @@
     <style name="circleImageView" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="mytoast">
+        <item name="stTextBold">true</item>
+        <item name="stTextColor">#fff</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">#00695C</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">#00695C</item>
+        <item name="stLength">LONG</item>
+        LONG or SHORT
+        <item name="stGravity">top</item>
+        top or center
+        <item name="stRadius">8dp</item>
+    </style>
+
+
+    <style name="toastDisable">
+        <item name="stTextBold">true</item>
+        <item name="stTextColor">#fff</item>
+        <item name="stTextSize">14sp</item>
+        <item name="stColorBackground">#C62828</item>
+        <item name="stSolidBackground">true</item>
+        <item name="stStrokeWidth">3dp</item>
+        <item name="stStrokeColor">#C62828</item>
+        <item name="stLength">LONG</item>
+        LONG or SHORT
+        <item name="stGravity">top</item>
+        top or center
+        <item name="stRadius">8dp</item>
     </style>
 </resources>
