@@ -8,22 +8,18 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.romcovid.R
-import com.example.romcovid.databinding.FragmentSettingsBinding
-import com.example.romcovid.viewmodel.SettingsViewModel
+import com.example.romcovid.databinding.FragmentWhyEnterNumberBinding
 
-class SettingsFragment : Fragment() {
+class WhyEnterNumberFragment : Fragment() {
 
-    private lateinit var viewModel: SettingsViewModel
-    private lateinit var binding: FragmentSettingsBinding
-
-
+    private lateinit var binding: FragmentWhyEnterNumberBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return DataBindingUtil.inflate<FragmentSettingsBinding>(
+        return DataBindingUtil.inflate<FragmentWhyEnterNumberBinding>(
             inflater,
-            R.layout.fragment_settings,
+            R.layout.fragment_why_enter_number,
             container,
             false
         )
@@ -34,12 +30,14 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         with(binding) {
-            provideNumber.setOnClickListener {
-                findNavController().navigate(R.id.navigate_to_contact_fragment)
+            backArrowIv.setOnClickListener {
+                findNavController().popBackStack()
             }
-            buttonBmi.setOnClickListener {
-                findNavController().navigate(R.id.navigate_to_bmi)
+
+            understandBtn.setOnClickListener {
+                findNavController().popBackStack()
             }
         }
 

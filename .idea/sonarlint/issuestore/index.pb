@@ -677,7 +677,5 @@ p
 Vcaches/transforms-3/ef46f510392dcff02a60df6a9f55fdab/transformed/monitor-1.6.1-runtime,6\d\6dad0849a714ad43f13ffc43117f26f9f13307f7
 y
 Iapp/src/main/java/com/example/romcovid/ui/dashboard/StatisticsFragment.kt,2\c\2c887a6d7c5afd1a7118eeacd136bf397d26e7d2
-n
->app/src/main/java/com/example/romcovid/ui/home/HomeFragment.kt,d\7\d7206957b5547344987c044b345b236af0edf676
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233

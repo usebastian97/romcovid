@@ -57,8 +57,8 @@
     <string name="label_remain_anonymous">I will not provide a number</string>
 
     <!--Why enter number-->
-    <string name="label_why_number_description">If SPKC is able to contact you, they can assess your risk and officially recognize you as a COVID-19 contact if applicable. That will give you access to a range of support options – like your general practitioner providing a sick leave note.\n\n
-    SPKC will receive your number with contact information only if and when it is established that you have been exposed to COVID-19. No one else will find out anything about you.</string>
+    <string name="label_why_number_description">If GOV is able to contact you, they can assess your risk and officially recognize you as a COVID-19 contact if applicable. That will give you access to a range of support options – like your general practitioner providing a sick leave note.\n\n
+    GOV will receive your number with contact information only if and when it is established that you have been exposed to COVID-19. No one else will find out anything about you.</string>
     <string name="label_why_number">Why a phone number is needed?</string>
     <string name="label_understand">Close</string>
     <string name="label_ok">OK</string>

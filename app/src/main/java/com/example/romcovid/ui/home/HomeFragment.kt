@@ -1,11 +1,15 @@
 package com.example.romcovid.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.romcovid.R
 import com.example.romcovid.databinding.FragmentHomeBinding
 import com.example.romcovid.model.CovidStats
 import com.example.romcovid.viewmodel.HomeViewModel
@@ -18,11 +22,8 @@ import timber.log.Timber
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private lateinit var binding: FragmentHomeBinding
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
     private lateinit var database:DatabaseReference
 
     override fun onCreateView(
@@ -33,12 +34,54 @@ class HomeFragment : Fragment() {
         val homeViewModel =
             ViewModelProvider(this)[HomeViewModel::class.java]
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        getData()
-        return binding.root
+        return DataBindingUtil.inflate<FragmentHomeBinding>(
+            inflater,
+            R.layout.fragment_home,
+            container,
+            false
+        )
+            .apply { binding = this }
+            .root
     }
 
-    private fun getData() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.apply {
+
+            tracingToggle.setOnCheckedChangeListener { _, isChecked ->
+                if (isChecked) {
+                    textHomeStatus.setText(R.string.home_status_work)
+                    val color = R.color.colorPrimary
+                    val image = R.drawable.ic_contact_tracing
+                    textHomeStatus.setTextColor(ContextCompat.getColor(requireContext(), color))
+                    homeMainIv.setImageResource(image)
+                } else {
+                    textHomeStatus.setText(R.string.home_status_idle)
+                    val colorIdle = R.color.colorButtonRed
+                    val imageIdle = R.drawable.ic_contact_tracing_disabled
+                    textHomeStatus.setTextColor(ContextCompat.getColor(requireContext(), colorIdle))
+                    homeMainIv.setImageResource(imageIdle)
+                }
+            }
+        }
+
+        with(binding) {
+
+            share.setOnClickListener {
+                val share = Intent(Intent.ACTION_SEND).apply {
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
+                    putExtra(Intent.EXTRA_TEXT, getString(R.string.share_link))
+                }
+                requireActivity().startActivity(
+                    Intent.createChooser(
+                        share,
+                        getString(R.string.app_name)
+                    )
+                )
+            }
+        }
 
         database = FirebaseDatabase.getInstance().reference.child("covid/last24hours")
 
@@ -60,10 +103,6 @@ class HomeFragment : Fragment() {
             }
 
         })
-    }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
