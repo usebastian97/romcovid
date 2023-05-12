@@ -43,7 +43,12 @@
     <fragment
         android:id="@+id/fragmentContainer"
         android:name="com.example.romcovid.ui.settings.ContactFragment"
-        tools:layout="@layout/fragment_contact" />
+        tools:layout="@layout/fragment_contact">
+
+        <action
+            android:id="@+id/navigate_to_why_number"
+            app:destination="@+id/whyNumberFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragmentCountryStats"
@@ -75,4 +80,9 @@
             app:argType="string" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/whyNumberFragment"
+        android:name="com.example.romcovid.ui.settings.WhyEnterNumberFragment"
+        tools:layout="@layout/fragment_why_enter_number" />
 </navigation>
